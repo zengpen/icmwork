@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //也就是构造函数每执行一次就会创建一个新的sayName方法
+        //也就是所有的实例的sayNAME是唯一的
+        function Person(name,age,gender)
+        {
+            console.log(this)
+            this.name=name
+            this.age=age
+            this.gender=gender
+            this.sayName=function(){
+                alert("hello 大家好 我是:"+this.name)
+            }
+        }
+        // var per=new Person("孙悟空",18,"男")
+        // var per2=new Person("猪八戒",28,"男")
+        // per.sayName()
+        // console.log(Person instanceof(Object))
+        // per2.sayName()
+        console.log(Person.prototype)
+    </script>
+</body>
+</html>

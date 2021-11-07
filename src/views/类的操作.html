@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        .a{
+            border: 1px solid red;
+        }
+        .b{
+          height: 1000px !important;
+        }
+        .c{
+            box-shadow: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">点我呀</button>
+    <div id="box" class="a"></div>
+    <script>
+        var btn=document.getElementById("btn1")
+        var box=document.getElementById("box")
+            btn.onclick=function(){ 
+            console.log(box.className)
+            addClass(box,"hello")
+            }
+//定义一个函数，用来向一个元素中添加指定的class属性值
+//参数obj要添加class属性的元素
+function addClass(obj,cn){
+var reg=new RegExp("\\b"+cn+"\\b")
+alert(reg)
+if(reg.test(obj.className)){
+//如果className中含有
+alert("false")
+return 
+}else{
+    alert("true")
+    obj.className+=" "+cn
+}
+}
+</script>
+</body>
+</html>

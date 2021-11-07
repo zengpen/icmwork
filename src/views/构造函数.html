@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var obj=new Person()
+        // 创建一个构造函数，专门用来创建person对象的
+        //构造函数就是一个普通的函数，创建方式和普通函数没有区别
+
+        function Person(name,age,gender){
+        console.log(this)
+        this.name=name
+        this.age=age
+        this.gender=gender
+        this.sayName=function(){
+        alert(this.name)
+        }
+       }
+        var per= new Person("孙悟空",18,"男")
+        // var dog=new Dog();
+
+        console.log(per)
+        console.log(per instanceof Person)
+        // console.log(dog instanceof Object)
+    </script>
+</body>
+</html>

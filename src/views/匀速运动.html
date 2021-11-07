@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="flyToRight">向右飞</button>
+    <div id="box">
+
+    </div>
+    <script>
+//   工厂方式创建对象
+      function createPerson(name,age,sex){
+       var obj=new Object()
+       obj.name=name
+       obj.age=age
+       obj.sex=sex
+       obj.sayName=function(){
+           alert(this.name)
+       }
+       return obj
+      }
+      function createDog(name,age){
+      var obj=new Object()
+      obj.name=name
+      obj.age=age
+      obj.sayWang=function(){
+          alert("汪汪")
+      }
+      return obj
+      }
+      var obj1=createPerson("曾鹏",22,"男")
+      var obj2=createPerson("橧志文",23,"女")
+      var obj3=createPerson("猪八戒",18,"好的")
+      console.log(typeof(obj1),obj1)
+      console.log(typeof(obj1),obj2)
+      console.log(typeof(obj1),obj3)
+      obj1.sayName()
+      var dog=createDog("旺财",3)
+      console.log(dog)
+      dog.sayWang()
+      //都是同一个类型
+      //使用工常方法创建的对象，使用的构造函数都是object
+      
+
+    </script>
+</body>
+</html>
